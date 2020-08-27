@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginStyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Document</title>
+    <script defer src="loginScript.js"></script>
+</head>
+<body >
+    <div class="form-box">
+        <div class="buttom-box" id="buttom-box">
+            <div id="btn"></div>
+            <button type="button" disabled class="switch-btn"  id="switch-btn" onclick="switchLogin()">Log in</button>
+            <button type="button" disabled class="switch-user-data" id="switch-user-data" onclick="switchUserData()">User data</button>
+        </div>
+        <div class="social-icons">
+            <img src="fb.png" >
+            <img src="tw.png" >
+            <img src="yt.png" >
+        </div>
+        <form id="login" name="login" class="input-group">
+            <input type="text" class="input-field" name="userId" placeholder="User Id" onkeyup="enableButton(this, 'userId')" required>
+            <input type="password" class="input-field" name="password" placeholder="Enter password" onkeyup="enableButton(this, 'password')" required>
+            <input type="checkbox" class="check-box"><span class="remember-password">Remember password</span>
+            <button class="submit-btn" id="logInBtn" onclick="setTimeout(switchRegister(), 2500)">
+                <h4>Log in</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  viewBox="0 0 24 24">
+                    <path d="M2.305,11.235a1,1,0,0,1,1.414.024l3.206,3.319L14.3,7.289A1,1,0,0,1,15.7,8.711l-8.091,8a1,1,0,0,1-.7.289H6.9a1,1,0,0,1-.708-.3L2.281,12.649A1,1,0,0,1,2.305,11.235ZM20.3,7.289l-7.372,7.289-.263-.273a1,1,0,1,0-1.438,1.39l.966,1a1,1,0,0,0,.708.3h.011a1,1,0,0,0,.7-.289l8.091-8A1,1,0,0,0,20.3,7.289Z"/>
+                </svg>
+            </button>
+        </form>
+        <div class="input-group" id="register">
+            <div class="space"></div>
+            <div id="personal-user" >
+                <label for="gender" class="text-drop-menu" ">User Id: dsdsds5ds5ds</label>
+                <div class="white-line"></div>
+                <div class="space"></div>
+                <label for="gender" class="text-drop-menu" ">Gender: Male</label>
+                <div class="white-line"></div>
+                <div class="space"></div>
+                <label for="" class="text-drop-menu">Age: 25</label>
+                <div class="white-line"></div>
+                <div class="space"></div>
+                <label for="" class="text-drop-menu">Location: usa</label>
+                <div class="white-line"></div>
+                <div class="space"></div>
+            </div>
+            <div id="professional-user">
+                <input type="text" class="input-field" placeholder="Website" required>
+                <input type="url" class="input-field" placeholder="Url 1" required>
+                <input type="text" class="input-field" placeholder="Message 1">
+                <input type="url" class="input-field" placeholder="Url 2">
+                <input type="text" class="input-field" placeholder="Message 2">
+            </div>
+            <button type="submit" class="submit-btn" onclick="setTimeout(switchLogin(), 2500)">
+                <h4>Sign out</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  viewBox="0 0 24 24">
+                    <path d="M2.305,11.235a1,1,0,0,1,1.414.024l3.206,3.319L14.3,7.289A1,1,0,0,1,15.7,8.711l-8.091,8a1,1,0,0,1-.7.289H6.9a1,1,0,0,1-.708-.3L2.281,12.649A1,1,0,0,1,2.305,11.235ZM20.3,7.289l-7.372,7.289-.263-.273a1,1,0,1,0-1.438,1.39l.966,1a1,1,0,0,0,.708.3h.011a1,1,0,0,0,.7-.289l8.091-8A1,1,0,0,0,20.3,7.289Z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
