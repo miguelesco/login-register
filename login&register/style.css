@@ -6,7 +6,7 @@
 .banner {
     height: 100%;
     width: 100%;
-    background-image:  url(newYork.jpg);
+    background-image:  url(../img/newYork.jpg);
     background-size: cover;
     position: absolute;
 }
