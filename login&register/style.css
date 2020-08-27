@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Poppins;
@@ -6,11 +6,11 @@
 .banner {
     height: 100%;
     width: 100%;
-    background-image:  url(../img/newYork.jpg);
+    background-image:  url(../login&register/img/newYork.jpg);
     background-size: cover;
     position: absolute;
 }
-.form-box{
+.form-box {
     width: 380px;
     height: 560px;
     position: relative;
@@ -24,7 +24,7 @@
     overflow-x: hidden;
 }
 
-.buttom-box{
+.buttom-box {
     width: 220px;
     margin: 35px auto;
     position: relative;
@@ -60,24 +60,24 @@
     border-radius: 30px;
     transition: .5s;
 }
-.social-icons{
+.social-icons {
     margin: 30px auto;
     text-align: center;
 }
-.social-icons img{
+.social-icons img {
     width: 30px;
     margin: 0 8px;
     box-shadow: 0 0 20px 0 #7f7f7f1d;
     cursor: pointer;
     border-radius: 50%;
 }
-.input-group{
+.input-group {
     top: 170px;
     position: absolute;
     width: 280px;
     transition: .5s;
 }
-.input-field{
+.input-field {
     width: 100%;
     padding: 10px 0;
     margin: 5px 0;
@@ -89,7 +89,7 @@
     background: transparent;
     color: white;
 }
-.submit-btn{
+.submit-btn {
     width: 85%;
     align-items: center;
     justify-content: center;
@@ -105,14 +105,20 @@
     color: white;
     transition: .4s;
 }
-.submit-btn:hover{
+.submit-btn:hover {
     width: 87%;
     box-shadow: 0px 10px 10px rgba(48, 48, 48, 0.4);
 }
-.check-box{
+.check-box {
     margin: 30px 10px 30px 0;
 }
-.remember-password{
+span {
+    color: rgb(207, 207, 207);
+    font-size: 12px;
+    bottom: 77px;
+    position: absolute;
+}
+.remember-password {
     color: rgb(207, 207, 207);
     font-size: 12px;
     bottom: 77px;
@@ -166,42 +172,33 @@ h4, svg {
         border: 2px solid white;
     }
 }
-.check-box{
-    margin: 30px 10px 30px 0;
-}
-span{
-    color: rgb(207, 207, 207);
-    font-size: 12px;
-    bottom: 67px;
-    position: absolute;
-}
 #login {
     left: 50px;
 }
-#register{
+#register {
     left: 450px;
 }
-#dataUser{
+#dataUser {
     left: 450px;
 }
 .dropdown {
     position: relative;
     display: inline-block;
   }
-.text-drop-menu{
+.text-drop-menu {
     font-weight: 300;
     font-size: 14px;
     color: white;
 }
-#professional-user{
+#professional-user {
     display: none;
 }
-.space{
+.space {
     background: transparent;
     width: 100%;
     height: 10px;
 }
-.white-line{
+.white-line {
     background: white;
     width: 100%;
     height: 1.2px;
