@@ -34,7 +34,8 @@ function enableButton(text, id) {
     }
 }
 
-function searchUser(){
+async function searchUser(){
+    await loading();
     switchLoginForm.style.left = "-400px";
     dataUser.style.left = "50px";
     btn.style.width = "125px"
@@ -45,6 +46,12 @@ function searchUser(){
     switchRegisterButton.style.display = "none"
 }
 
+async function loading() {
+    var stopAnimation;
+    var checkAnimationTime;
+    btnLogin.focus({animation: 'spin ' + stopAnimation + 's' + '500ms' + 'forwards'});
+    btnLogin.focus(svg, {animation: 'check ' + '500ms ' + checkAnimationTime + 'ms ' + 'forwards'})
+}
 
 function closeSesion(){
     window.location.reload();

@@ -94,7 +94,6 @@
     align-items: center;
     justify-content: center;
     height: 50px;
-    padding: 10px 30px;
     cursor: pointer;
     display: flex;
     margin: auto;
@@ -150,7 +149,7 @@ h4, svg {
     color: transparent;
 }
 .submit-btn:focus svg {
-    animation: check 500ms 2300ms forwards;
+    animation: check 500ms 1000ms forwards;
 }
 @keyframes spin {
     80% {

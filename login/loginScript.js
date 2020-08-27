@@ -22,8 +22,8 @@ function enableButton(text, id) {
     }
 }
 
-function switchRegister(){
-    console.log("fuck");
+async function searchUser(){
+    await loading();
     switchLoginForm.style.left = "-400px";
     switchRegisterForm.style.left = "50px";
     btn.style.width = "125px"
@@ -32,28 +32,15 @@ function switchRegister(){
     switchLoginButton.style.display = "none"
 }
 
-function switchLogin(){
-    switchLoginForm.style.left = "50px";
-    switchRegisterForm.style.left = "450px";
-    btn.style.left = "0px";
-    switchLoginButton.style.display = "block"
-    userDataPage.style.display = "none"
+async function loading() {
+    var stopAnimation;
+    var checkAnimationTime;
+    btnLogin.focus({animation: 'spin ' + stopAnimation + 's' + '500ms' + 'forwards'});
+    btnLogin.focus(svg, {animation: 'check ' + '500ms ' + checkAnimationTime + 'ms ' + 'forwards'})
 }
 
-function getUserType(){
-    var userType = document.getElementById("userType").value;
-    var personalUser = document.getElementById("personal-user");
-    var professionalUser = document.getElementById("professional-user");
-    var containerInput = document.getElementsByClassName("form-box");
-
-    console.log(userType);
-    if(userType === 'professional'){
-        console.log(containerInput);
-        personalUser.style.display = "none";
-        professionalUser.style.display = "block";
-    }else {
-        personalUser.style.display = "block";
-        professionalUser.style.display = "none";
-    }
+function closeSesion(){
+    window.location.reload();
 }
+
 
