@@ -89,7 +89,7 @@ function createScript(apiKey, id) {
     script += "myHeaders.append('Content-Type', 'application/json');";
     script += "var body = JSON.stringify({'apiKey':'" + apiKey + "','id':'" + id + "'});";
     script += "var requestOptions = {method: 'POST',headers: myHeaders,body: body,redirect: 'follow'};";
-    script += "fetch('http://localhost:3000/api/snippet', requestOptions).then(response => response.text())";
+    script += "fetch('http://localhost:3001/api/snippet', requestOptions).then(response => response.text())";
     script += ".then(result => {var div=document.createElement('div');div.setAttribute('id', 'loginDiv');document.getElementsByTagName('body')[0].appendChild(div);document.getElementById('loginDiv').innerHTML = result})";
     script += ".catch(error => console.log('error', error));";
     return script;
