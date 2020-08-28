@@ -23,6 +23,11 @@
             <img src="../login&register/img/yt.png" >
         </div>
         <form action="/" id="login" name="login" class="input-group">
+            <label for="userType" class="text-drop-menu" >Select user type</label>
+            <select id="userType" style="background: black; text-align: center; color: white; opacity: 0.4; border-color: transparent;" onchange="getUserType()" required>
+                <option value="personal">Personal</option>
+                <option value="professional">Professional</option>
+            </select>
             <input type="text" class="input-field" name="userId" placeholder="User Id" onkeyup="enableButton(this, 'userId')" required>
             <input type="password" class="input-field" name="password" placeholder="Enter password" onkeyup="enableButton(this, 'password')" required>
             <input type="checkbox" class="check-box"><span>Remember password</span>
@@ -32,7 +37,7 @@
         </form>
         <form action="/" id="register" class="input-group">
             <label for="userType" class="text-drop-menu" >Select user type</label>
-            <select id="userType" onchange="getUserType()" required>
+            <select id="userType" style="background: black; text-align: center; color: white; opacity: 0.4; border-color: transparent;" onchange="getUserType()" required>
                 <option value="personal">Personal</option>
                 <option value="professional">Professional</option>
             </select>

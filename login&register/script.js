@@ -14,13 +14,13 @@ $(document).ready( function(){
     $(".submit-btn").click(function(){
         $(this).addClass("active")
         setTimeout(function(){
-            $(".submit-btn").addClass("success");
+            $(".submit-btn").addClass("fail");
         }, 3700);
-        setTimeout(function(){
-            $(".submit-btn").removeClass("active");
-            $(".submit-btn").removeClass("success");
-            // $(".submit-btn").removeClass("fail");
-        }, 5000)
+        // setTimeout(function(){
+        //     $(".submit-btn").removeClass("active");
+        //     $(".submit-btn").removeClass("fail");
+        //     // $(".submit-btn").removeClass("fail");
+        // }, 5000)
     })
 
     // error css name .fail
