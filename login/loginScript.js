@@ -12,31 +12,46 @@ var inputs = {
     password: false
 }
 
+// wait until there is a click in the login button and add the class "active", after a few seconds he active the class "sucess" or "fail" deppends if the back finds the user. And if we not find the user or there is some error in the register form he display the "fail" class and remove the class "active & fail" 
+$(document).ready( function(){
+    $(".submit-btn").click(function(){
+        $(this).addClass("active")
+        setTimeout(function(){
+            $(".submit-btn").addClass("success");
+        }, 3700);
+        setTimeout(function(){
+            $(".submit-btn").removeClass("active");
+            $(".submit-btn").removeClass("success");
+            // $(".submit-btn").removeClass("fail");
+        }, 5000)
+    })
+
+    // error css name .fail
+});
+
+/**
+ * block the login button until the info has been filled 
+ */
 function handleForm(event) { event.preventDefault(); } 
 switchLoginForm.addEventListener('submit', handleForm);
 
 function enableButton(text, id) {
     inputs[id] = Boolean(text.value);
-    if (inputs.password && inputs.userId) {
-        btnLogin.disabled = false;
-    }
+    btnLogin.disabled = !Boolean(inputs.password && inputs.userId);
 }
 
-async function searchUser(){
-    await loading();
+/**
+ * Change the page to watch the user Data
+ */
+function searchUser(){
     switchLoginForm.style.left = "-400px";
-    switchRegisterForm.style.left = "50px";
+    dataUser.style.left = "50px";
     btn.style.width = "125px"
     boxButton.style.width = "125px";
-    userDataPage.style.display = "block"
+    dataUser.style.display = "block";
+    userDataButton.style.display = "block"
     switchLoginButton.style.display = "none"
-}
-
-async function loading() {
-    var stopAnimation;
-    var checkAnimationTime;
-    btnLogin.focus({animation: 'spin ' + stopAnimation + 's' + '500ms' + 'forwards'});
-    btnLogin.focus(svg, {animation: 'check ' + '500ms ' + checkAnimationTime + 'ms ' + 'forwards'})
+    switchRegisterButton.style.display = "none"
 }
 
 function closeSesion(){

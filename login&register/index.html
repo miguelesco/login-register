@@ -7,6 +7,7 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <title>Document</title>
     <script defer src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body class="banner">
     <div class="form-box">
@@ -22,14 +23,11 @@
             <img src="../login&register/img/yt.png" >
         </div>
         <form action="/" id="login" name="login" class="input-group">
-            <input type="text" class="input-field" name="userId" placeholder="User Id" required>
-            <input type="password" class="input-field" name="password" placeholder="Enter password" required>
+            <input type="text" class="input-field" name="userId" placeholder="User Id" onkeyup="enableButton(this, 'userId')" required>
+            <input type="password" class="input-field" name="password" placeholder="Enter password" onkeyup="enableButton(this, 'password')" required>
             <input type="checkbox" class="check-box"><span>Remember password</span>
-            <button class="submit-btn" id="logInBtn" onclick="setTimeout(searchUser(), 2500)">
-                <h4>Log in</h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  viewBox="0 0 24 24">
-                    <path d="M2.305,11.235a1,1,0,0,1,1.414.024l3.206,3.319L14.3,7.289A1,1,0,0,1,15.7,8.711l-8.091,8a1,1,0,0,1-.7.289H6.9a1,1,0,0,1-.708-.3L2.281,12.649A1,1,0,0,1,2.305,11.235ZM20.3,7.289l-7.372,7.289-.263-.273a1,1,0,1,0-1.438,1.39l.966,1a1,1,0,0,0,.708.3h.011a1,1,0,0,0,.7-.289l8.091-8A1,1,0,0,0,20.3,7.289Z"/>
-                </svg>
+            <button class="submit-btn" id="logInBtn" >
+                Log in
             </button>
         </form>
         <form action="/" id="register" class="input-group">

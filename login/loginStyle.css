@@ -81,23 +81,84 @@
     background: transparent;
     color: white;
 }
-.submit-btn{
-    width: 85%;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    cursor: pointer;
+.submit-btn {
     display: flex;
-    margin: auto;
+    width: 85%;
+    height: 50px;
+    border: 1px solid #fff;
     background: linear-gradient(to right,#2434c2, #240985);
-    border: 0;
+    box-sizing: border-box;
+    color: white;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    justify-content: center;
+    line-height: 56px;
+    margin: auto;
     outline: none;
     border-radius: 50px;
-    color: white;
-    transition: .4s;
+    transition: all ease .5s;
 }
-.submit-btn:hover{
-    width: 87%;
+.active {
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-left-color: transparent;
+    animation: rotate 1.4s ease 0.5s infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(360deg);
+    }
+}
+.success{
+    position: relative;
+    background: none;
+    background-color: white;
+    animation: bounce .3s ease-in;
+}
+@keyframes bounce {
+    0% {
+        transform: scale(0.9);
+    }
+}
+.success:before{
+    content: '';
+    position: absolute;
+    background: url(../login&register/img/check.svg) no-repeat;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 31px;
+    height: 31px;
+    line-height: 31px;
+    top: 8px;
+}
+.fail{
+    position: relative;
+    background: none;
+    background-color: white;
+    animation: bounce .3s ease-in;
+}
+@keyframes bounce {
+    0% {
+        transform: scale(0.9);
+    }
+}
+.fail:before{
+    content: '';
+    position: absolute;
+    background: url(../login&register/img/fail.svg) no-repeat;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 31px;
+    height: 31px;
+    line-height: 31px;
+    top: 8px;
+}
+.submit-btn:hover {
     box-shadow: 0px 10px 10px rgba(48, 48, 48, 0.4);
 }
 .check-box{
@@ -111,51 +172,6 @@
 }
 #login {
     left: 50px;
-}
-h4, svg {
-    position: absolute;
-    color: white;
-    fill: transparent;
-    transition: .4s;
-}
-.submit-btn:hover h4 {
-    transition: .4s;
-    font-size: 16px;
-}
-.submit-btn:focus {
-    outline: none;
-    box-shadow: none;
-    border: 2px solid transparent;
-    width: 50px;
-    border-left: 2px solid white;
-    border-bottom: 2px solid white;
-    animation: spin 2s 500ms forwards;
-}
-.submit-btn:focus h4 {
-    color: transparent;
-}
-.submit-btn:focus svg {
-    animation: check 500ms 2300ms forwards;
-}
-@keyframes spin {
-    80% {
-        border: 2px solid transparent;
-        border-left: 2px solid white;
-    }
-    100%{
-        transform: rotate(1080deg);
-        border: 2px solid white;
-    }
-}
-@keyframes check {
-    to {
-        fill: white;
-    }
-}
-@keyframes circle {
-    to {
-        border: 2px solid white;
-    }
 }
 #login {
     left: 50px;
